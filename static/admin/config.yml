@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "publications"
+    label: "Publications"
+    label_singular: "Publication"
+    folder: "content"
+    slug: "{{slug}}"    
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image" }
+      - name: school
+        label: School
+        widget: select
+        options: ["Ecole Nationale Supérieure d’Architecture de Paris-Malaquais", "Institute for Advanced Architecture of Catalonia", "Institut supérieur des arts de Toulouse", "Ecole Nationale Supérieure d’Architecture de Toulouse", "Ecole Spéciale d’Architecture", "Ecole Nationale Supérieure d’Architecture Paris Val de Seine", "Ecole Nationale Supérieure d’Architecture de Versailles", "Faculté d’Architecture La Cambre Horta ULB", "TU München", "Porto Academy, faculdade de Arquitectura da Universidade do Porto", "EPFL Ecole Polytechnique Fédérale de Lausanne / ENAC Faculté Environnement Naturel, Architectural et Construit", "Accademia di architettura di Mendrisio, Universita della Svizzera italiana", "Department of Architecture, School of Design and Environment, National University of Singapor", "HKU Faculty of Architecture", "Institut of Advanced Architecture of Catalonia"]
+      - {label: "Year", name: "year", default: "2018", widget: "string"}
+      - {label: "Dimensions", name: "dimensions", widget: "string", default: "21 x 29,7 cm"}
+      - {label: "Pages", name: "pages", widget: "string", default: "72"}
+      - {label: "Teacher (Teacher 1, Teacher 2)", name: "teacher", widget: "list"}
+      - {label: "Guest (optional)", name: "guest", widget: "string", required: false}
+      - {label: "Assistant (optional)", name: "assistant", widget: "string", required: false}
+      - {label: "Student", name: "student", widget: "text", required: false}  
+      - {label: "Graphic Design (optional)", name: "graphic", widget: "string", required: false}
+      - {label: "Description-EN (optional)", name: "descriptionEn", widget: "text", default: "The studio advocates an experimental approach as a form of individual research. There is no ‘studio style’, but students are encouraged to develop a well-argued position as a fundament of their project work. We also encourage a collaborative approach and students are often required to work in pairs as a way developing solutions that come from discussion and well formulated argument.", required: false}
+      - {label: "Description-FR (optional)", name: "descriptionFr", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+        
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: Full_image, name: full_image, widget: image}
+          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}

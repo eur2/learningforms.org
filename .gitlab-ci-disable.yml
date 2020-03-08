@@ -1,0 +1,15 @@
+image: node:10.15.3
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build --prefix-paths
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

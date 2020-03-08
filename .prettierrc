@@ -1,0 +1,10 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "semi": true,
+  "cssEnable": [
+    "css",
+    "less",
+    "sass"
+  ]
+}

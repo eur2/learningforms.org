@@ -1,0 +1,514 @@
+/*@font-face {
+  font-family: 'tt';
+  font-display: fallback;
+  src: url('tt.woff') format('woff');
+  src: url('tt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}*/
+@font-face {
+  font-family: 'tt';
+  font-display: fallback;
+  src: url('../assets/t10.woff') format('woff');
+  src: url('../assets/t10.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@font-face {
+  font-family: 'tt';
+  src: url('d8.woff') format('woff');
+  src: url('d8.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'tt', 'Times New Roman', 'Times', serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  color: #000;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-spacing: -0.01em;
+  letter-spacing: -0.01em;
+}
+::selection {
+  text-shadow: none;
+  background-color: #ededed;
+}
+/*.dot {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Segoe, sans-serif;
+}*/
+a {
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: blue;
+}
+i,
+em {
+  font-style: italic;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+figure {
+}
+figcaption {
+}
+header,
+main,
+article,
+footer,
+div {
+  display: block;
+}
+h1,
+h2,
+p {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+h3,
+h4 {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+ul {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.index {
+  min-height: 100vh; /* 1 */
+  display: flex; /* 2 */
+  flex-direction: column; /* 3 */
+}
+
+main {
+  flex-grow: 1;
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+
+/*li {
+}*/
+/*input {
+  font-family: 't10', 'upro55', 'Times New Roman', Times, serif;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(236, 236, 236);
+  color: black;
+  padding: 0.5rem 0.75rem 0.25rem 0.75rem;
+  margin: 0 0.5rem 0.5rem 0;
+  box-shadow: 0 10px 28px -7px rgba(0, 0, 0, 0.1);
+}*/
+/*.container {
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}*/
+.header {
+  /*border-bottom: black solid 1px;*/
+  /*border-bottom: #ededed solid 1px;*/
+  display: flex;
+  flex-direction: row;
+  /*padding: 0.9rem 0.75rem 0rem 0.75rem;*/
+  padding: 0.45rem;
+}
+.header div {
+  flex: 1;
+  margin: 0.45rem 0.45rem 0 0.45rem;
+
+  /*margin: 0.3rem;
+  margin-top: 0;*/
+}
+.header button {
+  background-color: #ededed;
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+.header button:hover {
+  background-color: black;
+  color: white;
+}
+.header .content {
+  margin: 0;
+}
+.header div div {
+  margin: 0;
+  padding: 0;
+}
+.header p {
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+.header .logo {
+  display: flex;
+  justify-content: space-around;
+}
+.header img {
+  padding: 0.75rem;
+  width: 100%;
+  margin: auto;
+}
+
+.front {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sticky {
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
+}
+.index nav {
+  /*padding: 0.9rem;
+  padding-bottom: 0;*/
+  padding: 0.45rem 0.9rem 0rem 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.left {
+  display: inline-flex;
+  flex: 10;
+}
+.right button {
+  margin-right: 0;
+}
+main {
+  margin: 0.9rem;
+  margin-top: 0;
+}
+.index main,
+.post nav {
+  margin: 0.45rem;
+}
+.post h2 {
+  flex-basis: 100%;
+  padding: 0.45rem;
+}
+li.tag {
+  max-width: 410px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+.rounded {
+  display: block;
+  border-radius: 2rem;
+  background-color: #fafafa;
+  padding: 0.5rem;
+  box-shadow: 0 10px 28px -7px rgba(0, 0, 0, 0.1);
+  border: 0;
+}*/
+/*
+.navigation {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  padding: 0.5rem;
+}
+.prev {
+  float: right;
+}
+.next {
+  float: left;
+}*/
+/*.taglist {
+  display: block;
+  width: 100%;
+}
+.tag {
+  display: inline-block;
+  margin: 0.5rem 0.25rem 0.5rem 0;
+}*/
+
+button,
+input {
+  font-family: 'tt', 'Times New Roman', Times, serif;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem 0.25rem 0.75rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.post button,
+.front button,
+li.tag,
+input {
+  background-color: #ededed;
+  color: black;
+}
+
+.front button,
+button.true,
+button:hover,
+input:hover,
+.index article:hover li {
+  color: white;
+  background-color: blue;
+}
+
+.index article:hover h2 {
+  color: blue;
+}
+/*.open article {
+  border-bottom: 1px solid black;
+}
+.open article header {
+  display: inline-flex;
+}
+.open article header ul {
+  display: block;
+}
+.open article header h3 {
+  font-size: 1rem;
+}*/
+/*.open.list {
+  flex-wrap: wrap;
+  padding: 0.9rem;
+}*/
+
+.front button:hover {
+  background-color: #ededed;
+  color: black;
+}
+
+.index main,
+.post nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.thumb {
+  flex-basis: 25%;
+  /*margin: 0.9rem;*/
+  padding: 0.45rem;
+  padding-bottom: 50px;
+  /*flex-wrap: wrap;*/
+
+  /*border-top: solid black 1px;*/
+}
+
+.list {
+  flex-basis: 100%;
+  border-bottom: #ededed solid 1px;
+  padding: 0.9rem;
+}
+.list:last-of-type {
+  border-bottom: 0;
+}
+.list header {
+  display: flex;
+}
+.post .list {
+  padding: 0;
+  padding-left: 0.5rem;
+}
+.post nav {
+  border-top: #ededed solid 1px;
+  padding-top: 0.45rem;
+}
+
+footer {
+  padding: 0.9rem;
+  border-top: #ededed solid 1px;
+  display: flex;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 2000px) {
+  h1,
+  h2,
+  p {
+    font-size: 2.5rem;
+  }
+  h3,
+  h4,
+  button,
+  .post button,
+  .front button,
+  input,
+  .item,
+  footer p {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header {
+    flex-direction: column;
+  }
+  .thumb {
+    flex-basis: 50%;
+  }
+  .tags {
+    flex-wrap: wrap;
+  }
+  li.tag {
+    max-width: 300px;
+    /*display: inline-flex;*/
+    /*white-space: pre-wrap;*/
+  }
+}
+@media only screen and (max-width: 400px) {
+  h1,
+  h2,
+  p {
+    font-size: 1.5rem;
+  }
+  .index .thumb {
+    flex-basis: 100%;
+  }
+}
+@media print {
+  @page {
+    size: 21cm 29.7cm;
+    margin: 0;
+    /*margin-bottom: 0.8cm;*/
+  }
+  /*@page {
+    size: 11.85cm 17.5cm;
+    margin: 0;
+    margin-bottom: 0.8cm;
+  }*/
+  body {
+    -webkit-font-smoothing: none;
+    -moz-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  div.item,
+  button,
+  * {
+    /*font-size: 14.15pt;*/
+    font-size: 13.2pt;
+    line-height: 1;
+  }
+  h1,
+  h2,
+  p {
+    line-height: 1.15;
+  }
+  .front {
+    display: block;
+    padding-bottom: 0;
+    padding-top: 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .header div div {
+    margin: 0;
+    padding: 0;
+  }
+  .header span {
+    display: none;
+  }
+  .header img {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  img.logo-right {
+    width: 50%;
+    padding-top: 0.25rem;
+  }
+  .front button {
+    max-width: 20cm;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .index nav,
+  nav,
+  main,
+  article,
+  footer {
+    display: none;
+  }
+  .print main {
+    display: block;
+    margin: 0;
+  }
+  .print article {
+    display: flex;
+    page-break-after: always;
+    /*padding-right: 52%;*/
+    width: 50%;
+    padding: 0.6cm;
+  }
+  div.desc {
+    padding-top: 0; /*
+    border-top: 0.1px black solid;
+    padding-top: 0.1cm;*/
+  }
+  p {
+    /*padding-bottom: 12pt;*/
+  }
+  div.item {
+    border-top: 0.1px black solid;
+    padding-top: 0.1cm;
+    margin-bottom: 14pt;
+  }
+}
